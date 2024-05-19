@@ -63,14 +63,14 @@ public class Mission1 : MonoBehaviour
         var step = speed * Time.deltaTime;
         //Alteration of speed for the robot to reach point b, use step
         if (!missionComplete){
-             //Move robot to b
-             robot.transform.position = Vector3.MoveTowards(robot.transform.position, b.transform.position, step);
-             if(robot.transform.position == b.transform.position)
-             {
+            //Move robot to b
+            robot.transform.position = Vector3.MoveTowards(robot.transform.position, b.transform.position, step);
+            if(robot.transform.position == b.transform.position)
+            {
                 missionStatus.text = "Failed!";
                 missionComplete = true;
                 StartCoroutine(StartResetting());
-             }
+            }
              
             //alterating by jai for mission combining
             if(starFind.Length == 0)
